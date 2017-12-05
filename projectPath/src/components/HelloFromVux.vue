@@ -1,41 +1,54 @@
 <template>
   <div>
-    <div class="vux-demo">
-      <img class="logo" src="../assets/vux_logo.png">
-      <h1> </h1>
-    </div>
-    <group title="cell demo">
-      <cell title="VUX" value="cool" is-link></cell>
-    </group>
+    <box class="mainWidth textCenter">
+      <x-img :src="showUrl" class="show"></x-img>
+      <box class="welcome-font">欢迎来访!</box>
+      <box class="enter-page">
+        <router-link to="HelloWorld">进入页面 >></router-link>
+      </box>
+    </box>
   </div>
 </template>
 
 <script>
-import { Group, Cell } from 'vux'
+  import {Group, Cell, Box, XImg} from 'vux'
+  import showUrl from '../assets/images/show.png'
 
-export default {
-  components: {
-    Group,
-    Cell
-  },
-  data () {
-    return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Hello World!'
+  export default {
+    components: {
+      XImg,
+      Box,
+      Group,
+      Cell
+    },
+    data () {
+      return {
+        showUrl: showUrl,
+        msg: 'Hello World!',
+      }
     }
   }
-}
 </script>
 
 <style>
-.vux-demo {
-  text-align: center;
-}
-.logo {
-  width: 100px;
-  height: 100px
-}
+  .show {
+    width: 240px;
+    margin-top: 80px;
+  }
+
+  .welcome-font {
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .enter-page {
+    margin-top: 100px;
+    text-decoration: underline;
+  }
+
+  .enter-page a {
+    color: #fff;
+  }
 </style>

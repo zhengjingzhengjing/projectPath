@@ -1,3 +1,4 @@
+<!--项目的说明文档 markdown模式-->
 # showing
 
 > A Vue.js project

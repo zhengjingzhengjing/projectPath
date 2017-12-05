@@ -1,0 +1,20 @@
+html,body{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+  position: relative;
+  width: 100%;
+  color: #333;
+  background: #cd4748;
+  font-family: "PingFang SC";
+  font-size: 14px;
+}
+.textCenter{
+  text-align: center;
+}
+.mainWidth{
+  width: 80%;
+  margin: 0 auto;
+}
